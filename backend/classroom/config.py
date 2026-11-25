@@ -14,7 +14,7 @@ log = logging.getLogger(__name__)
 
 
 class Settings(BaseSettings):
-    model_config = SettingsConfigDict(env_file=".env", extra="ignore")
+    model_config = SettingsConfigDict(env_file=(ROOT / ".env", ".env"), extra="ignore")
 
     env: Literal["development", "production"] = "development"
     database_url: str = f"sqlite:///{ROOT / 'data' / 'classroom.db'}"
