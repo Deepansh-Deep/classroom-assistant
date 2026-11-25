@@ -1,0 +1,17 @@
+# Production-like setup with PostgreSQL. For a quick try, `docker build` + `docker run` with SQLite is enough.
+services:
+  app:
+    build: .
+    ports: ["8000:8000"]
+    env_file: .env
+    environment:
+      DATABASE_URL: postgresql+psycopg://classroom:classroom@db:5432/classroom
+    depends_on:
+      db: { condition: service_healthy }
+  db:
+    image: postgres:16-alpine
+    environment: { POSTGRES_USER: classroom, POSTGRES_PASSWORD: classroom, POSTGRES_DB: classroom }
+    volumes: [pgdata:/var/lib/postgresql/data]
+    healthcheck: { test: ["CMD-SHELL", "pg_isready -U classroom"], interval: 3s, retries: 20 }
+volumes:
+  pgdata:

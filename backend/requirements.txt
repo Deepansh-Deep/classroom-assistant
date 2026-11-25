@@ -1,0 +1,13 @@
+fastapi>=0.115
+uvicorn[standard]>=0.30
+pydantic-settings>=2.3
+sqlalchemy>=2.0
+pyjwt>=2.9
+cryptography>=43
+# Google Classroom sign-in and sync (only used when GOOGLE_CLIENT_ID is set)
+google-api-python-client>=2.140
+google-auth-oauthlib>=1.2
+# Optional LLM phrasing for Q&A answers
+groq>=0.11
+# Uncomment for PostgreSQL:
+# psycopg[binary]>=3.2
