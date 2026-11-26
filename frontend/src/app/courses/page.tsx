@@ -3,8 +3,8 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useState } from "react";
 import { ArrowLeft, Download, RefreshCw, X } from "lucide-react";
-import { Badge, Card, Empty, FactorBars, Ring, Shell, useMe } from "@/components/ui";
-import { api, BAND, download, due, type Assignment, type Score, type User } from "@/lib/api";
+import { Badge, Card, Empty, FactorBars, Ring, Shell, useMe } from "../../components/ui";
+import { api, BAND, download, due, type Assignment, type Score, type User } from "../../lib/api";
 
 type Course = { id: string; name: string; section: string; description: string; role: string; assignments: number; students: number; synced_at: string };
 type Row = Score & { id: string; name: string; email: string };

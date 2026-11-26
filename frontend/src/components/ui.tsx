@@ -3,7 +3,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState, type ReactNode } from "react";
 import { BellRing, BookOpen, GraduationCap, LayoutDashboard, LogOut, MessageCircleQuestion } from "lucide-react";
-import { api, BAND, token, type Factors, type Score, type User } from "@/lib/api";
+import { api, BAND, token, type Factors, type Score, type User } from "../lib/api";
 
 export function Card({ children, className = "", style }: { children: ReactNode; className?: string; style?: React.CSSProperties }) {
   return <div style={style} className={`rounded-2xl border border-white/[.07] bg-white/[.03] p-5 backdrop-blur animate-rise ${className}`}>{children}</div>;

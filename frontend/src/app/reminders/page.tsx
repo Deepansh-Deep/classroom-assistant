@@ -1,8 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
 import { BellRing, Check } from "lucide-react";
-import { Card, Empty, Shell } from "@/components/ui";
-import { api } from "@/lib/api";
+import { Card, Empty, Shell } from "../../components/ui";
+import { api } from "../../lib/api";
 
 type Rem = { title: string; course: string; kind: string; due_at: string; hours_left: number };
 const OPTIONS = [72, 48, 24, 12, 6, 2, 1];

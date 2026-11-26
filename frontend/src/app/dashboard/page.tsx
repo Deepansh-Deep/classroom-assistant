@@ -3,8 +3,8 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { AlertTriangle, CalendarClock, CheckCircle2, Clock, Users } from "lucide-react";
 import { Bar, BarChart, Cell, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
-import { Badge, Card, Empty, FactorBars, Ring, Shell, useMe } from "@/components/ui";
-import { api, due, type Assignment, type Score } from "@/lib/api";
+import { Badge, Card, Empty, FactorBars, Ring, Shell, useMe } from "../../components/ui";
+import { api, due, type Assignment, type Score } from "../../lib/api";
 
 type TeacherDash = {
   role: "teacher";

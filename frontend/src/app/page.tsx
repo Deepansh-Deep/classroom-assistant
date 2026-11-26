@@ -2,7 +2,7 @@
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { BellRing, GraduationCap, LineChart, MessageCircleQuestion, School, UserRound } from "lucide-react";
-import { api, token, type User } from "@/lib/api";
+import { api, token, type User } from "../lib/api";
 
 type Health = { demo_mode: boolean; google_login: boolean; llm: boolean };
 

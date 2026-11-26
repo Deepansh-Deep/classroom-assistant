@@ -1,8 +1,8 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { FileText, Megaphone, NotebookPen, Send } from "lucide-react";
-import { Shell } from "@/components/ui";
-import { api } from "@/lib/api";
+import { Shell } from "../../components/ui";
+import { api } from "../../lib/api";
 
 type Source = { n: number; course: string; kind: string; title: string; text: string; relevance: number };
 type Msg = { who: "me" | "bot"; text: string; sources?: Source[]; mode?: string };

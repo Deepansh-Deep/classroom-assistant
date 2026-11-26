@@ -1,7 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
-import { token } from "@/lib/api";
+import { token } from "../../lib/api";
 
 // Google OAuth lands here with the session token in the URL fragment (never sent to any server).
 export default function AuthCallback() {
